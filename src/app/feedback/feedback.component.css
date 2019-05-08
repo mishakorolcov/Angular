@@ -1,0 +1,32 @@
+agm-map {
+  height: 400px;
+  /*zoom: 100%;*/
+}
+
+h2 {
+  margin-left: 145px;
+  margin-top: 15px;
+}
+
+
+
+label {
+  width: 40px;
+  display: inline-block
+}
+
+
+
+
+
+input.ng-touched.ng-invalid{
+  border-color: red;
+}
+
+.error{
+  color: red;
+}
+textarea.ng-touched.ng-invalid{
+  border-color: red;
+}
+

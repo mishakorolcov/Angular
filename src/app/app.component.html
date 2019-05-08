@@ -1,20 +1,321 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div [class.xxx]="true">
+
+
+<!--меню 1-->
+  <nav class="navbar navbar-expand-lg  navbar-dark  ">
+
+    <div id="logo">
+      <a routerLink="/about">PR<i class="fa fa-circle "></i>GER</a>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse justify-content-end">
+      <ul class="navbar-nav  " id="firstBlock">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Головна<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Акції</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="">Новинки</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="/about">Про нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="/login" target="_self">Логін</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="/register" target="_self">Регістрація</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="/feedback">Звязатися з нами</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+
+  <!--  <div class="container ">-->
+
+
+<!--  <div class="row">-->
+<!--    <div [class.x1]="true" class="sm-3"><i class="far fa-clock"></i></div>-->
+<!--    <div [class.x2]="true" class="sm"><h3>Робочі години</h3></div>-->
+
+
+
+<!--    <div class="row align-items-end">-->
+<!--      <div [class.x3]="true" class="col"><h4>Пн-пт: 9.00 - 18.00</h4></div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  -->
+
+  <!--  </div>-->
+
+
+  <div class="d-none d-lg-block">
+  <div class="row ">
+    <div class="col-md-3">
+      <div class="single-support" >
+        <div class="support-content">
+          <i class="far fa-clock"></i>
+          <div class="support-text">
+            <h1>Робочі години</h1>
+            <p>Пн - Пт: 8.00 - 18.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 col-sm-4">
+      <div class="single-support">
+        <i class="fa fa-truck"></i>
+        <div class="support-text">
+          <h1 class="zero gfont-1">Безплатна доставка</h1>
+          <p> Більше 200 гривень !!!</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Single-Support -->
+    <!-- Start Single-Support -->
+    <div class="col-md-3 col-sm-4">
+      <div class="single-support">
+        <i class="fas fa-money-bill-alt"></i>
+        <div class="support-text">
+          <h1 class="zero gfont-1">Повернення грошей </h1>
+          <p>В період 30 днів після доставки</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Single-Support -->
+    <!-- Start Single-Support -->
+    <div class="col-md-3 col-sm-4">
+      <div class="single-support">
+        <i class="fa fa-phone-square"></i>
+        <div class="support-text">
+          <h1 class="zero gfont-1">Телефон: 0123456789</h1>
+          <p>Заказуйте онлайн зараз !</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Single-Support -->
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+
+
+
+
+
+  <!--МЕНЮ 2-->
+  <nav id="lo" class="navbar navbar-expand-lg navbar-dark  ">
+
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse justify-content-end" id="navbarCollapse">
+      <ul class="navbar-nav ">
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+            Компютери
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">MacBook</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Ноутбуки</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+            Планшети
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Samsung</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Apple</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Lenovo</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+            Телефони
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Samsung</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Apple</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Lenovo</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+            Аксесуари
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Навушники</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Чехли</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Пакети</a>
+        </li>
+
+        <form class="form-inline mt-1 mt-md-0">
+          <input class="form-control mr-sm-1" type="text" placeholder="Пошук" aria-label="Search">
+          <button class="btn btn-outline-light my-1 my-sm-0" type="submit">Пошук</button>
+<!--          <button type="submit"><i class="fa fa-search"></i></button>-->
+        </form>
+
+        <div navbar-right id="basket">
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+
+        </div>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <router-outlet> </router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Значки початок-->
+  <div class="subscribe-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-7 col-xs-12">
+          <label class="hidden-sm hidden-xs">Підписатися на нашу розсилку</label>
+          <div class="subscribe">
+            <form action="#">
+              <input type="text" placeholder="Enter Your E-mail">
+              <button type="submit">Підписатися</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4  col-xs-12">
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook fb"></i></a>
+            <a href="#"><i class="fab fa-google-plus gp"></i></a>
+            <a href="#"><i class="fab fa-twitter tt"></i></a>
+            <a href="#"><i class="fab fa-youtube yt"></i></a>
+            <a href="#"><i class="fab fa-linkedin li"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Значки кінець-->
+
+
+<!--  <a href="#" id="kode-topbtn" class="thbg-colortwo"><i class="fa fa-angle-up"></i></a>-->
+
+  <!--  ФУТЕР ПОЧАТОК-->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="footer-title">
+            <h5>Мій Акаунт</h5>
+          </div>
+          <nav>
+            <ul class="footer-content">
+              <li><a href="">Мій Акаунт</a></li>
+              <li><a href="#">Історія заказів</a></li>
+              <li><a href="">Корзина</a></li>
+              <li><a href="#">Повернення</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="footer-title">
+            <h5>Обслуговування кліентів</h5>
+          </div>
+          <nav>
+            <ul class="footer-content">
+              <li><a href="">Звязок з нами</a></li>
+              <li><a href="">О магазині</a></li>
+              <li><a href="#">Інформація о доставці</a></li>
+              <li><a href="#">Гарантія</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-xs-12 hidden-sm col-md-3">
+          <div class="footer-title">
+            <h5>Оплата і доставка</h5>
+          </div>
+          <nav>
+            <ul class="footer-content">
+              <li><a href="#">Виробники</a></li>
+              <li><a href="#">Сертифікати</a></li>
+              <li><a href="#">Філіали</a></li>
+              <li><a href="shop-list.html">Акції</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="footer-title">
+            <h5>Контакти</h5>
+          </div>
+          <nav>
+            <ul class="footer-content box-information">
+              <li>
+                <i class="fa fa-home"></i><span>Україна м.Львів,вул  Проспект Франка,7</span>
+              </li>
+              <li>
+                <i class="fa fa-envelope"></i><p><a href="contact.html">admin@bootexperts.com</a></p>
+              </li>
+              <li>
+                <i class="fa fa-phone"></i>
+                <span>01234-56789</span> <br> <span> 01234-56789</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--ФУТЕР КІНЕЦЬ-->
+
+</div>
 
