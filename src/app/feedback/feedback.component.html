@@ -12,35 +12,36 @@
 
 
 
+
 <div class="row">
   <div class="col-md-8"><h2>Форма звязку</h2></div>
 
   <div class="container">
     <hr>
     <form [formGroup]="myFirstReactiveForm" (submit)="onSubmit()">
-     <div
-       class="form-group"
-       [ngClass]="{'has-error': myFirstReactiveForm.get('name').invalid && myFirstReactiveForm.get('name').touched}"
-     >
+      <div
+        class="form-group"
+        [ngClass]="{'has-error': myFirstReactiveForm.get('name').invalid && myFirstReactiveForm.get('name').touched}"
+      >
         <label for="name">Імя</label>
         <br>
         <input type="text"
                id="name"
                formControlName="name"/>
-<!--        <div class="error" *ngIf="isControlInvalid('name')">-->
-<!--          Ведіть правильне ім'я-->
-<!--        </div>-->
-       <div class="error"
-          *ngIf="myFirstReactiveForm.get('name').invalid && myFirstReactiveForm.get('name').touched">
-        <span *ngIf="myFirstReactiveForm.get('name')['errors']['required']">це поле є обовязковим для заповнення</span>
-        <span *ngIf="myFirstReactiveForm.get('name')['errors']['pattern']">ведіть корекний імейл</span>
-          <span *ngIf="myFirstReactiveForm.get('name')['errors']['minLength']">імейл</span>
-       </div>
+        <!--        <div class="error" *ngIf="isControlInvalid('name')">-->
+        <!--          Ведіть правильне ім'я-->
+        <!--        </div>-->
+        <div class="error"
+             *ngIf="myFirstReactiveForm.get('name').invalid && myFirstReactiveForm.get('name').touched">
+          <span *ngIf="myFirstReactiveForm.get('name')['errors']['required']">це поле є обовязковим для заповнення</span>
+          <span *ngIf="myFirstReactiveForm.get('name')['errors']['pattern']">ведіть корекний імя</span>
+          <span *ngIf="myFirstReactiveForm.get('name')['errors']['minLength']">імя</span>
+        </div>
       </div>
 
 
 
-  <br/>
+      <br/>
 
 
 
@@ -55,9 +56,9 @@
                formControlName="email"/>
       </div>
       <div class="error"
-      *ngIf="myFirstReactiveForm.get('email').invalid && myFirstReactiveForm.get('email').touched">
+           *ngIf="myFirstReactiveForm.get('email').invalid && myFirstReactiveForm.get('email').touched">
         <span *ngIf="myFirstReactiveForm.get('email')['errors']['required']">це поле є обовязковим для заповнення</span>
-        <span *ngIf="myFirstReactiveForm.get('email')['errors']['email']">ведіть корекний ім'я</span>
+        <span *ngIf="myFirstReactiveForm.get('email')['errors']['email']">ведіть корекний імейл</span>
       </div>
       <br>
 
@@ -66,18 +67,18 @@
         class="form-group"
         [ngClass]="{'has-error': myFirstReactiveForm.get('message').invalid && myFirstReactiveForm.get('message').touched}"
       >
-      <label for="message">Повідомлення</label>
-      <textarea
-        id="message"
-        formControlName="message"
-        class="form-control"
-        rows="15"
-      ></textarea>
-       </div>
+        <label for="message">Повідомлення</label>
+        <textarea
+          id="message"
+          formControlName="message"
+          class="form-control"
+          rows="15"
+        ></textarea>
+      </div>
       <div class="error"
-      *ngIf="myFirstReactiveForm.get('message').invalid && myFirstReactiveForm.get('message').touched">
-      <span *ngIf="myFirstReactiveForm.get('message')['errors']['required']">це поле є обовязковим для заповнення</span>
-      <span *ngIf="myFirstReactiveForm.get('message')['errors']['pattern']">ведіть корекний текст (10-1тис символів)</span>
+           *ngIf="myFirstReactiveForm.get('message').invalid && myFirstReactiveForm.get('message').touched">
+        <span *ngIf="myFirstReactiveForm.get('message')['errors']['required']">це поле є обовязковим для заповнення</span>
+        <span *ngIf="myFirstReactiveForm.get('message')['errors']['pattern']">ведіть корекний текст (10-1000 символів)</span>
       </div>
 
       <br/>

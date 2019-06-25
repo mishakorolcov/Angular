@@ -24,12 +24,17 @@
         <li class="nav-item">
           <a class="nav-link " routerLink="/about">Про нас</a>
         </li>
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link " routerLink="/login" target="_self">Логін</a>-->
+<!--        </li>-->
+
         <li class="nav-item">
-          <a class="nav-link " routerLink="/login" target="_self">Логін</a>
+        <a  class="nav-link " routerLink=" " data-toggle="modal" data-target="#exampleModal">Вхід</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " routerLink="/register" target="_self">Регістрація</a>
-        </li>
+
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link " routerLink="/register" target="_self">Регістрація</a>-->
+<!--        </li>-->
         <li class="nav-item">
           <a class="nav-link " routerLink="/feedback">Звязатися з нами</a>
         </li>
@@ -41,22 +46,6 @@
 
 
 
-  <!--  <div class="container ">-->
-
-
-<!--  <div class="row">-->
-<!--    <div [class.x1]="true" class="sm-3"><i class="far fa-clock"></i></div>-->
-<!--    <div [class.x2]="true" class="sm"><h3>Робочі години</h3></div>-->
-
-
-
-<!--    <div class="row align-items-end">-->
-<!--      <div [class.x3]="true" class="col"><h4>Пн-пт: 9.00 - 18.00</h4></div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  -->
-
-  <!--  </div>-->
 
 
   <div class="d-none d-lg-block">
@@ -203,6 +192,187 @@
 
 
 
+  
+
+
+
+
+  <!-- Modal  початок -->
+  <div class="modal fade"
+       id="exampleModal" tabindex="-1"
+       role="dialog" aria-labelledby="exampleModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div>
+          <ul class="nav nav-tabs" role="tablist">
+            <h4 class="modal-title" id="exampleModalLabel">
+              <a class="nav-link " routerLink=" " data-toggle="modal"
+                 aria-controls="home" role="tab" data-target="#exampleModal">Логін</a>
+
+            </h4>
+            <h4 class="modal-title" id="exampleModalLabell">
+              <a class="nav-link " routerLink="" data-toggle="modal" role="tab" aria-controls="home"
+                 data-target="#exampleModall">Регістрація</a>
+            </h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </ul>
+
+
+        </div>
+
+
+
+
+        <div class="modal-body">
+          <div class="container-fluid">
+
+            <form #myform="ngForm" (ngSubmit)="sendForm()">
+              <div class="form-froup">
+                <label for="emailHelp">Електрона почта</label>
+                <input type="email"
+                       name="emailHelp"
+                       class="form-control form-control-sm"
+                       placeholder="Емаіл"
+                       [(ngModel)]="developer.emailHelp"
+                >
+                <small id="emailHelp" class="form-text text-muted">
+                  Введіть ваш імейл
+                </small>
+              </div>
+
+              <div class="form-froup">
+                <label for="passHelp">Пароль</label>
+                <input type="password"
+                       class="form-control"
+                       name="password"
+                       placeholder=" Пароль"
+                       [(ngModel)]="developer.password"
+                >
+                <small id="passHelp" class="form-text text-muted">
+                  Пароль повинен мати не менше 4 символів
+                </small>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input">Запам'ятати мене
+                </label>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary">
+                  Отправить
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Modal регістрація -->
+  <div>
+    <div class="modal fade"
+         id="exampleModall" tabindex="-1"
+         role="dialog" aria-labelledby="exampleMod"
+         aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <ul class="nav nav-tabs" role="tablist">
+            <h4 class="modal-title" id="exampleModalLabel">
+              <a class="nav-link " routerLink=" " data-toggle="modal"
+                 aria-controls="home" role="tab" data-target="#exampleModal">Логін</a>
+
+            </h4>
+            <h4 class="modal-title" id="name">
+              <a class="nav-link " routerLink="" data-toggle="modal" role="tab" aria-controls="home"
+                 data-target="#exampleModall">Регістрація</a>
+            </h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </ul>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form #myform="ngForm" (ngSubmit)="sendFormTwo()">
+                <div class="form-froup">
+                  <label for="emailHelp2"> Імя</label>
+                  <input type="email"
+                         class="form-control form-control-sm"
+                         name="name"
+                         aria-describdby="emailHelp"
+                         placeholder=" Імя"
+                         [(ngModel)]="developerRegister.name"
+                  >
+                  <small id="emailHelp2" class="form-text text-muted">
+                    Введіть ваше імя
+                  </small>
+                </div>
+
+
+                <div class="form-froup">
+                  <label for="numberHelp2"> Номер телефону</label>
+                  <input type="password"
+                         class="form-control form-control-sm"
+                         placeholder=" Номер"
+                         name="number"
+                         [(ngModel)]="developerRegister.number"
+                  >
+                  <small id="numberHelp2" class="form-text text-muted">
+                    Введіть ваш номер
+                  </small>
+                </div>
+
+                <div class="form-froup">
+                  <label for="Help2"> Електрона почта</label>
+                  <input type="email"
+                         class="form-control form-control-sm"
+                         aria-describdby="emailHelp"
+                         placeholder=" Емаіл"
+                         name="email"
+                         [(ngModel)]="developerRegister.email"
+                  >
+                  <small id="Help2" class="form-text text-muted">
+                    Введіть ваш імейл
+                  </small>
+                </div>
+
+                <div class="form-froup">
+                  <label for="passHelp2"> Пароль</label>
+                  <input type="password"
+                         class="form-control form-control-sm"
+                         placeholder=" Пароль"
+                         name="pass"
+                         [(ngModel)]="developerRegister.pass"
+                  >
+                  <small id="passHelp2" class="form-text text-muted">
+                    Пароль повинен мати не менше 4 символів
+                  </small>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input"> Запам'ятати мене
+                  </label>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-primary">
+                    Зарегистрироваться
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -220,7 +390,27 @@
 
 
 
-<!--Значки початок-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Значки початок-->
   <div class="subscribe-area">
     <div class="container">
       <div class="row">

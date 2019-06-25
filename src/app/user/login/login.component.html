@@ -1,161 +1,171 @@
-<!--<p class="text-xs-center">Войти для работи</p>-->
+<div class="modal fade"
+     id="exampleModal" tabindex="-1"
+     role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div>
+        <ul class="nav nav-tabs" role="tablist">
+          <h4 class="modal-title" id="exampleModalLabel">
+            <a class="nav-link " routerLink=" " data-toggle="modal"
+               aria-controls="home" role="tab" data-target="#exampleModal">Логін</a>
 
-<!--<div [class.xxx]="true">-->
-<!--  <h2>Реєстрація</h2>-->
-<!--  <form #myform="ngForm" (ngSubmit)="sendForm()" >-->
+          </h4>
+          <h4 class="modal-title" id="exampleModalLabell">
+            <a class="nav-link " routerLink="" data-toggle="modal" role="tab" aria-controls="home"
+               data-target="#exampleModall">Регістрація</a>
+          </h4>
 
-<!--    &lt;!&ndash;onclick="myFunction()"&ndash;&gt;-->
-
-<!--    <div class="form-group">-->
-<!--      <label for="name" [ngStyle]="{color: !nameI.valid && nameI.touched ? 'red' : 'back' }">Імя</label><br>-->
-<!--      <input-->
-<!--        #nameI="ngModel"-->
-<!--        type="text"-->
-<!--        placeholder="name"-->
-<!--        name="name"-->
-<!--        id="name"-->
-<!--        class="form-control"-->
-<!--        [(ngModel)]="developer.name"-->
-<!--      >-->
-<!--    </div>-->
-
-
-<!--    <br>-->
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </ul>
 
 
-
-<!--    <label for="number" [ngStyle]="{color: !nameIi.valid && nameIi.touched ? 'red' : 'back'}">номер телефону</label><br>-->
-<!--    <input-->
-<!--      #nameIi="ngModel"-->
-<!--      type="text"-->
-<!--      placeholder="phone"-->
-<!--      name="number"-->
-<!--      required-->
-<!--      [(ngModel)]="developer.number"-->
-<!--      id="number"-->
-<!--    >-->
-
-<!--    <br>-->
-<!--    <br>-->
-
-<!--    <label for="email" [ngStyle]="{color: !nameIq.valid && nameIq.touched ? 'red' : 'back'}">ел.пошта</label><br>-->
-<!--    <input-->
-<!--      #nameIq="ngModel"-->
-<!--      type="text"-->
-<!--      placeholder="email"-->
-<!--      name="email"-->
-<!--      required-->
-<!--      [(ngModel)]="developer.email"-->
-<!--      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"-->
-<!--      email-->
-<!--      maxlength = "20"-->
-<!--      minlength="4"-->
-<!--      id="email"-->
-<!--    >-->
-<!--    <br>-->
-
-
-<!--    <br>-->
-
-<!--    <label for="password" [ngStyle]="{color: !nameIa.valid && nameIa.touched ? 'red' : 'back'}">пароль</label><br>-->
-<!--    <input-->
-<!--      #nameIa="ngModel"-->
-<!--      type="password"-->
-<!--      placeholder="password"-->
-<!--      name="password"-->
-<!--      required-->
-<!--      [(ngModel)]="developer.password"-->
-<!--      password-->
-<!--      maxlength = "20"-->
-<!--      minlength="4"-->
-<!--      id="password"-->
-<!--    >-->
-<!--    <br>-->
-
-
-<!--    &lt;!&ndash;<label for="confirmPassword" [ngStyle]="{color: !nameIa.valid && nameIa.touched ? 'red' : 'back'}">пароль ще раз</label><br>&ndash;&gt;-->
-<!--    &lt;!&ndash;<input&ndash;&gt;-->
-<!--    &lt;!&ndash;#nameua="ngModel"&ndash;&gt;-->
-<!--    &lt;!&ndash;type="password"&ndash;&gt;-->
-<!--    &lt;!&ndash;placeholder="password"&ndash;&gt;-->
-<!--    &lt;!&ndash;name="password"&ndash;&gt;-->
-<!--    &lt;!&ndash;required&ndash;&gt;-->
-<!--    &lt;!&ndash;[(ngModel)]="developer.confirmPassword"&ndash;&gt;-->
-<!--    &lt;!&ndash;password&ndash;&gt;-->
-<!--    &lt;!&ndash;id="confirmPassword"&ndash;&gt;-->
-<!--    &lt;!&ndash;minlength="4"&ndash;&gt;-->
-<!--    &lt;!&ndash;&gt;&ndash;&gt;-->
+      </div>
 
 
 
-<!--    <p>-->
-<!--      <input-->
 
-<!--        #nameIw="ngModel"-->
-<!--        [class.aaa]="true"-->
-<!--        type="checkbox"-->
-<!--        name="submit"-->
-<!--        [(ngModel)]="developer.submit"-->
-<!--        minlength="4"-->
-<!--        required-->
-<!--      > <label [ngStyle]="{color: !nameIw.valid && nameIw.touched ? 'red' : 'back'}">-->
-<!--      Заповнюючи цю форму ви погоджуєтеся з-->
-<!--      <a href="" [ngStyle]="{color: !nameIw.valid && nameIw.touched ? 'red' : 'back'}">-->
-<!--        Пользовательское соглашение-->
-<!--      </a>-->
-<!--    </label>-->
-<!--    </p>-->
-<!--    <br>-->
+      <div class="modal-body">
+        <div class="container-fluid">
 
-<!--    <button-->
-<!--      type="submit"-->
-<!--      [disabled]="!myform.valid"-->
-<!--    >Зарегистрироваться-->
-<!--    </button>-->
-<!--    <br>-->
-<!--    <br>-->
+          <form>
+            <div class="form-froup">
+              <label for="exampleInputEmail">Електрона почта</label>
+              <input type="email"
+                     name="name"
+                     class="form-control form-control-sm"
+                     id="exampleInputEmail"
+                     placeholder="Емаіл"
+              >
+              <small id="emailHelp" class="form-text text-muted">
+                Введіть ваш імейл
+              </small>
+            </div>
 
-<!--  </form>-->
-<!--  <button>Вхід</button>-->
-<!--</div>-->
-<h1>тест</h1>
+            <div class="form-froup">
+              <label for="exampleInputPass">Пароль</label>
+              <input type="password"
+                     class="form-control"
+                     id="exampleInputPass"
+                     placeholder=" Пароль"
+              >
+              <small id="passHelp" class="form-text text-muted">
+                Пароль повинен мати не менше 4 символів
+              </small>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">Запам'ятати мене
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary">
+                Отправить
+              </button>
+            </div>
 
-<!--  <form [formGroup]="form" (ngSubmit)="onSubmit()">-->
-<!--<label>Name: </label>-->
-<!--  <input-->
-<!--    type="text"-->
-<!--    name="name"-->
-<!--    [(ngModel)]="form.name"-->
-<!--  >-->
+          </form>
 
-<!--  <label>password: </label>-->
-<!--  <input-->
-<!--    type="password"-->
-<!--    name="password"-->
-<!--    [(ngModel)]="form.password"-->
-<!--  >-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!--  <label>email: </label>-->
-<!--  <input-->
-<!--    type="text"-->
-<!--&lt;!&ndash;    name="email"&ndash;&gt;-->
-<!--    class='form-control underlined'-->
-<!--&lt;!&ndash;    [(ngModel)]="form.email"&ndash;&gt;-->
-<!--    formControlName="email"-->
-<!--  >-->
-<!--  <span class="form-help-text"-->
-<!--  *ngIf="form.get('email').invalid && form.get('email').touched"-->
-<!--  >-->
-<!--    error-->
-<!--  </span>-->
 
-<!--  <label>number: </label>-->
-<!--  <input-->
-<!--    type="text"-->
-<!--    name="number"-->
-<!--    [(ngModel)]="form.number"-->
-<!--  >-->
 
-<!--  <button>Send</button>-->
 
-<!--</form>-->
+
+<!-- Modal регістрація -->
+<div>
+  <div class="modal fade"
+       id="exampleModall" tabindex="-1"
+       role="dialog" aria-labelledby="exampleMod"
+       aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <ul class="nav nav-tabs" role="tablist">
+          <h4 class="modal-title" id="exampleModalLabel">
+            <a class="nav-link " routerLink=" " data-toggle="modal"
+               aria-controls="home" role="tab" data-target="#exampleModal">Логін</a>
+
+          </h4>
+          <h4 class="modal-title" id="name">
+            <a class="nav-link " routerLink="" data-toggle="modal" role="tab" aria-controls="home"
+               data-target="#exampleModall">Регістрація</a>
+          </h4>
+
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </ul>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form role="form">
+              <div class="form-froup">
+                <label for="exampleInputEmail"> Імя</label>
+                <input type="email"
+                       class="form-control form-control-sm"
+                       id="name"
+                       aria-describdby="emailHelp"
+                       placeholder=" Імя"
+                >
+                <small id="emailHelp2" class="form-text text-muted">
+                  Введіть вашt імя
+                </small>
+              </div>
+
+
+              <div class="form-froup">
+                <label for="exampleInputPass"> Номер телефону</label>
+                <input type="password"
+                       class="form-control form-control-sm"
+                       id="number"
+                       placeholder=" Номер"
+                >
+                <small id="numberHelp2" class="form-text text-muted">
+                  Введіть ваш номер
+                </small>
+              </div>
+
+              <div class="form-froup">
+                <label for="exampleInputEmail"> Електрона почта</label>
+                <input type="email"
+                       class="form-control form-control-sm"
+                       id="Emailreg"
+                       aria-describdby="emailHelp"
+                       placeholder="Емаіл"
+                >
+                <small id="emailHelp" class="form-text text-muted">
+                  Введіть ваш імейл
+                </small>
+              </div>
+
+              <div class="form-froup">
+                <label for="exampleInputPass"> Пароль</label>
+                <input type="password"
+                       class="form-control form-control-sm"
+                       id="Pass2"
+                       placeholder=" Пароль"
+                >
+                <small id="passHelp2" class="form-text text-muted">
+                  Пароль повинен мати не менше 4 символів
+                </small>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input"> Запам'ятати мене
+                </label>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary">
+                  Зарегистрироваться
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
